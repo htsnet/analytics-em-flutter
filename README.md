@@ -2,7 +2,7 @@
 ## Um exemplo de uso do Analytics em Flutter com GetIt
 
 
-Eu já havia usado o Google Analytics em um app em Flutter, mas achei muito complicado. Com meus conhecimentos limitados de OOP, eu passava via parâmetro o *analytics* e o "observer" a cada troca de página página. Era bem complicado. 
+Eu já havia usado o Google Analytics em um app em Flutter, mas achei muito complicado. Com meus conhecimentos limitados de OOP, eu passava via parâmetro o *analytics* e o *observer* a cada troca de página página. Era bem complicado. 
 
 Em um novo aplicativo que fiz (**Meu ônibus SP**: https://pratic.com.br/meu-onibus-sp/) eu deixei de inserir logo de início. Fiquei pesquisando uma forma de fazer que fosse mais elegante e fácil de dar manutenção. Consegui achar um jeito (não sei se é o melhor, mas funciona!) usando o *package* GetIt. 
 
