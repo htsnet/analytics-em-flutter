@@ -10,7 +10,7 @@ Em um novo aplicativo que fiz (**Meu ônibus SP**: https://pratic.com.br/meu-oni
 
 Criei um arquivo com a classe **AnalyticsService**
 
-'''
+```
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 
@@ -23,30 +23,35 @@ class AnalyticsService {
     await _analytics.logEvent(name: evento);
   }
 }
-'''
+```
 
 Dentro do **main.dart**, antes de chamar o **runApp(MyApp());** eu faço a chamada da classe:
 
-'''
+```
 getIt.registerSingleton<AnalyticsService>(AnalyticsService());
-'''
+```
   
 Aí, em qualquer página, na montagem do *widget* principal, eu chamo esta classe e envio um evento:
 
-'''
+```
 @override
   Widget build(BuildContext context) {
     final analytics = GetIt.I.get<AnalyticsService>();
     analytics.sendAnalytics(evento: 'Recompensa');
-'''  
+```  
 
 Ou dentro de qualquer lugar, como por exemplo:
 
-'''
+```
 onPressed: () {
    analytics.sendAnalytics(evento: 'Nome_evento');
-'''                              
+```                              
 
 ## Registro no Analytics
 
 Claro que é preciso ter criado o aplicativo dentro do Analytics para receber os eventos!
+
+## Onde ver o eventos
+
+Abra o console do Google Analytics, vá no seu aplicativo, localize o menu **EVENTOS** na barra lateral esquerda e, dentro dele, **Todos os eventos**.
+
